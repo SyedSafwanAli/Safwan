@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Safwan</title>
+
+  <!-- Inter Tight Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── ABOUT PAGE: HERO ── */
+    .about-hero {
+      padding: 100px 0 80px;
+      position: relative;
+    }
+
+    .about-hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .about-hero-eyebrow .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--black);
+      display: inline-block;
+    }
+
+    .about-hero-headline {
+      font-size: clamp(2.2rem, 5vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-hero-headline .line2 {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .about-hero-headline .boxed {
+      display: inline-block;
+      border: 3px solid var(--black);
+      border-radius: 60px;
+      padding: 0 32px;
+      line-height: 1.05;
+    }
+
+    .about-hero-desc {
+      max-width: 480px;
+      margin-top: 48px;
+      margin-left: auto;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #444;
+    }
+
+    /* ── FULL-WIDTH IMAGE ── */
+    .fullwidth-img-wrap {
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .fullwidth-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ── WHO I AM — editorial layout ── */
+    .wiam-section {
+      padding: 90px 0 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: start;
+    }
+
+    /* Left column */
+    .wiam-left {
+      padding-right: 60px;
+      border-right: 1px solid var(--border);
+    }
+
+    .wiam-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    .wiam-label .wiam-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--black);
+      display: inline-block;
+    }
+
+    .wiam-headline {
+      font-size: clamp(1.85rem, 2.8vw, 2.55rem);
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      margin: 0;
+    }
+
+    /* Right column */
+    .wiam-right {
+      padding-left: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 60px;
+    }
+
+    .wiam-bullet {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--black);
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .wiam-para {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: #555;
+      margin: 0 0 40px;
+    }
+
+    .btn-hire-now {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--black);
+      border: 1.5px solid var(--black);
+      border-radius: 50px;
+      padding: 14px 36px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    .btn-hire-now:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* ── ACTIONS (kept for stats etc.) ── */
+    .about-page-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hire {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 32px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-hire:hover { background: var(--purple); color: var(--white); }
+
+    .btn-cv-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--black);
+      border: 2px solid var(--black);
+      border-radius: 50px;
+      padding: 12px 28px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-cv-outline:hover { background: var(--black); color: var(--white); }
+
+    /* ── INFO GRID ── */
+    .about-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .about-info-cell {
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .about-info-cell:nth-child(even) { border-right: none; }
+    .about-info-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+    .about-info-cell .cell-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .about-info-cell .cell-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    @media (max-width: 900px) {
+      .wiam-section {
+        grid-template-columns: 1fr;
+      }
+      .wiam-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 48px;
+      }
+      .wiam-right {
+        padding-left: 0;
+        padding-top: 40px;
+      }
+    }
+
+    /* ── SKILLS SECTION ── */
+    .skills-section {
+      padding: 70px 0;
+    }
+
+    .skills-section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skills-section-title {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .skills-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .skill-bar-item {}
+
+    .skill-bar-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .skill-bar-track {
+      height: 6px;
+      background: var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: var(--black);
+      border-radius: 10px;
+      transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ── EXPERIENCE TIMELINE ── */
+    .exp-timeline {
+      padding: 70px 0;
+    }
+
+    .exp-timeline-header {
+      margin-bottom: 48px;
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 32px;
+      border-bottom: 1px solid var(--border);
+      gap: 20px;
+      transition: background var(--transition);
+    }
+
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-item:hover { background: var(--gray-light); }
+
+    .timeline-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .timeline-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .timeline-info {}
+
+    .timeline-company {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .timeline-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ── EXPERIENCE CARDS ── */
+    .exp-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .exp-card {
+      background: var(--white);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: background var(--transition);
+    }
+
+    .exp-card:hover { background: var(--gray-light); }
+
+    .exp-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .exp-card-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .exp-card-logo.light {
+      background: var(--gray-light);
+      color: var(--black);
+    }
+
+    .exp-card-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    .exp-card-meta {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .exp-card-date,
+    .exp-card-location {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .exp-card-company {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0 0 4px;
+    }
+
+    .exp-card-role {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+
+    .exp-card-desc {
+      font-size: 0.86rem;
+      line-height: 1.75;
+      color: #555;
+      margin: 0 0 20px;
+      flex: 1;
+    }
+
+    .exp-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .exp-card-tags span {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--black);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── EDUCATION CARDS ── */
+    .edu-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .edu-card {
+      background: var(--white);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: background var(--transition);
+    }
+
+    .edu-card:hover { background: var(--gray-light); }
+
+    .edu-card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--black);
+      background: var(--gray-light);
+      margin-bottom: 24px;
+    }
+
+    .edu-card-body { flex: 1; }
+
+    .edu-card-badge {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .edu-card-badge--done {
+      background: var(--gray-light);
+      color: var(--black);
+      border: 1px solid var(--border);
+    }
+
+    .edu-card-school {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+
+    .edu-card-degree {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+
+    .edu-card-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0 0 10px;
+    }
+
+    .edu-card-desc {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: #666;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .exp-cards-grid { grid-template-columns: 1fr; }
+      .edu-cards-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CORE VALUES ── */
+    .cv-section { padding: 80px 0; }
+
+    .cv-header {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 56px;
+    }
+
+    .cv-heading {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin: 14px 0 0;
+    }
+
+    .cv-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .cv-card {
+      background: var(--white);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: background var(--transition);
+      min-height: 320px;
+    }
+
+    .cv-card:hover { background: var(--gray-light); }
+
+    .cv-card-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .cv-card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: auto;
+      padding-bottom: 40px;
+    }
+
+    .cv-card-desc {
+      font-size: 0.85rem;
+      line-height: 1.75;
+      color: #666;
+      margin: 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 0; }
+
+    .faq-header { margin-bottom: 52px; }
+
+    .faq-heading {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 10px 0 12px;
+    }
+
+    .faq-subtext {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.65;
+    }
+
+    .faq-body {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .faq-img {
+      position: sticky;
+      top: 90px;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .faq-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .faq-list { display: flex; flex-direction: column; }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--black);
+      transition: color var(--transition);
+    }
+
+    .faq-question:hover { color: var(--purple); }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: all var(--transition);
+      color: var(--black);
+    }
+
+    .faq-item.open .faq-icon {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 0 20px;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    @media (max-width: 900px) {
+      .cv-header { grid-template-columns: 1fr; gap: 20px; }
+      .cv-cards { grid-template-columns: 1fr; }
+      .faq-body { grid-template-columns: 1fr; }
+      .faq-img { position: static; aspect-ratio: 16/9; }
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      padding: 80px 0;
+      align-items: start;
+    }
+
+    .testi-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 16px 0 32px;
+    }
+
+    .testi-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .testi-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      display: block;
+      line-height: 1;
+    }
+
+    .testi-stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .testi-stars { margin-top: 6px; color: var(--black); font-size: 0.85rem; }
+
+    .testi-avatars {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .testi-av {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gray-light);
+      border: 2px solid var(--border);
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testi-av.active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .testi-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 28px; }
+
+    .testi-slides { position: relative; min-height: 160px; }
+
+    .testi-slide { display: none; }
+    .testi-slide.active { display: block; }
+
+    .testi-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .testi-quote {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--black);
+      margin-bottom: 24px;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testi-qmark { font-size: 1.8rem; color: var(--black); line-height: 1; }
+
+    .testi-name { font-size: 0.92rem; font-weight: 700; display: block; }
+    .testi-role { font-size: 0.78rem; color: var(--text-muted); }
+
+    .testi-dots {
+      display: flex;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .testi-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition);
+      padding: 0;
+    }
+
+    .testi-dot.active { background: var(--black); }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      padding: 80px 0;
+      align-items: start;
+    }
+
+    .contact-heading {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 16px 0 36px;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 0; }
+
+    .contact-form-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
+    }
+
+    .contact-fields { display: flex; flex-direction: column; }
+
+    .contact-field {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .contact-field:last-child { border-bottom: none; }
+
+    .contact-field i {
+      position: absolute;
+      left: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .contact-field input,
+    .contact-field select {
+      width: 100%;
+      padding: 16px 16px 16px 44px;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.88rem;
+      background: transparent;
+      color: var(--black);
+      appearance: none;
+    }
+
+    .contact-select-arrow {
+      position: absolute !important;
+      right: 14px !important;
+      left: auto !important;
+      font-size: 0.75rem !important;
+    }
+
+    .contact-textarea-wrap {
+      position: relative;
+      display: flex;
+    }
+
+    .contact-textarea-wrap i {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-textarea-wrap textarea {
+      width: 100%;
+      padding: 16px 16px 16px 44px;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.88rem;
+      background: transparent;
+      color: var(--black);
+      resize: none;
+    }
+
+    .contact-btn {
+      width: 100%;
+      padding: 18px;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 0 0 4px 4px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+
+    .contact-btn:hover { background: var(--purple); }
+
+    .contact-map {
+      border-radius: 4px;
+      overflow: hidden;
+      height: 480px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .testi-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; padding: 60px 0; }
+      .contact-form-top { grid-template-columns: 1fr; }
+      .contact-field { border-right: none; }
+      .contact-textarea-wrap { border-top: 1px solid var(--border); }
+      .contact-map { height: 300px; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-page-section {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-page-badge { left: 12px; }
+
+      .about-hero-headline { font-size: clamp(2.8rem, 10vw, 5rem); }
+
+      .about-hero-desc { margin-left: 0; }
+
+      .skills-section-header { flex-direction: column; align-items: flex-start; }
+
+      .timeline-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+
+    @media (max-width: 600px) {
+      .about-info-grid { grid-template-columns: 1fr; }
+      .about-info-cell:nth-child(even) { border-right: none; }
+      .about-info-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+      .about-info-cell:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="mailto:syedsafwanali8802@gmail.com" class="header-email">
+        <i class="bi bi-geo-alt"></i>
+        syedsafwanali8802@gmail.com
+      </a>
+
+      <a href="index.html" class="header-logo">
+        <i class="bi bi-circle-half"></i>
+        SAFWAN
+      </a>
+
+      <button class="hamburger-btn" id="menuBtn" aria-label="Open menu">
+        <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="2"  x2="28" y2="2"  stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       OVERLAY
+  ══════════════════════════════════════ -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ══════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-top">
+      <a href="index.html" class="sidebar-logo">
+        <i class="bi bi-circle-half"></i>
+        SAFWAN
+      </a>
+      <button class="close-btn" id="closeBtn" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item">
+        <a href="index.html" class="nav-label"><i class="bi bi-house"></i> Home</a>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item active">
+        <a href="about.html" class="nav-label"><i class="bi bi-person"></i> About</a>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-briefcase"></i> Work</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-stars"></i> Services</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-grid"></i> Pages</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-envelope"></i> Contact</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-about">
+      <h3>About Us</h3>
+      <p>Passionate WordPress developer crafting clean, modern, and functional web experiences.</p>
+      <a href="mailto:syedsafwanali8802@gmail.com" class="btn-outline"><i class="bi bi-arrow-right"></i> Contact Us</a>
+    </div>
+
+    <div class="sidebar-contact">
+      <h3>Contact Us</h3>
+      <div class="contact-row">
+        <div class="contact-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+        <span>Karachi, Pakistan</span>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div>
+        <span>+92 317 0666406</span>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div>
+        <span>syedsafwanali8802@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="sidebar-social">
+      <a href="#" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════════
+       HERO  —  About Me
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner about-hero">
+
+      <p class="about-hero-eyebrow">
+        <span class="dot"></span> About Me
+      </p>
+
+      <h1 class="about-hero-headline">
+        <div>WORDPRESS &amp; FRONTEND</div>
+        <div class="line2">
+          WEB <span class="boxed">DEVELOPER</span>
+        </div>
+      </h1>
+
+      <p class="about-hero-desc">
+        I'm a WordPress developer with a passion for crafting fast, modern, and functional websites.
+        With a strong foundation in custom plugin development and <strong>4+ years of experience</strong>,
+        I turn ideas into seamless digital experiences.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FULL-WIDTH IMAGE
+  ══════════════════════════════════════ -->
+  <div class="fullwidth-img-wrap">
+    <img src="assets/images/about-img.png" alt="Syed Safwan Ali" />
+  </div>
+
+  <!-- ══════════════════════════════════════
+       WHO I AM SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner wiam-section">
+
+      <!-- Left: label + big headline -->
+      <div class="wiam-left">
+        <p class="wiam-label"><span class="wiam-dot"></span> About Me</p>
+        <h2 class="wiam-headline">
+          I'm a WordPress developer
+          with a passion for building
+          clean digital experiences.
+          With expertise in Divi &amp;
+          Beaver Builder and 4+ years
+          of experience
+        </h2>
+      </div>
+
+      <!-- Right: bullet + paragraph + button -->
+      <div class="wiam-right">
+        <span class="wiam-bullet"></span>
+        <p class="wiam-para">
+          My work spans across Pakistan, UK, and Canada — delivering custom WordPress
+          themes, plugins, and WooCommerce stores for businesses of all sizes. I thrive
+          on solving real problems through clean code and thoughtful design, always
+          delivering on time and beyond expectations.
+        </p>
+        <a href="mailto:syedsafwanali8802@gmail.com" class="btn-hire-now">Hire Me Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       STATS
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner stats">
+
+      <div class="stat-item">
+        <span class="stat-number">12+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">4+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Countries Served</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner skills-section">
+
+      <div class="skills-section-header">
+        <div>
+          <p class="resume-label"><span class="resume-dot"></span> MY SKILLS</p>
+          <h2 class="skills-section-title">Technical Expertise</h2>
+        </div>
+      </div>
+
+      <div class="skills-bars">
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-top">
+            <span>WordPress Development</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width:95%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-top">
+            <span>WooCommerce</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-top">
+            <span>Divi &amp; Beaver Builder</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width:92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-top">
+            <span>Custom Plugin Development (PHP)</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width:80%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-top">
+            <span>HTML / CSS / JavaScript</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width:88%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-top">
+            <span>UI Design (Photoshop / Canva)</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width:75%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CORE VALUES
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner cv-section">
+
+      <div class="cv-header">
+        <div>
+          <p class="resume-label"><span class="resume-dot"></span> CORE VALUES</p>
+          <h2 class="cv-heading">How I approach projects from start to finish</h2>
+        </div>
+      </div>
+
+      <div class="cv-cards">
+
+        <div class="cv-card">
+          <span class="cv-card-num">01</span>
+          <h3 class="cv-card-title">Clean Code &amp; Performance First</h3>
+          <p class="cv-card-desc">Every project starts with a solid foundation — semantic HTML, optimised CSS, and lean PHP. Fast-loading sites aren't optional; they're the baseline I deliver every time.</p>
+        </div>
+
+        <div class="cv-card">
+          <span class="cv-card-num">02</span>
+          <h3 class="cv-card-title">Mobile-First &amp; Responsive Design</h3>
+          <p class="cv-card-desc">With the majority of users on mobile, I build every layout from the smallest screen up — ensuring pixel-perfect results across all devices and browsers.</p>
+        </div>
+
+        <div class="cv-card">
+          <span class="cv-card-num">03</span>
+          <h3 class="cv-card-title">Client-Centered Communication</h3>
+          <p class="cv-card-desc">I believe great websites come from clear collaboration. I keep clients informed at every stage — from discovery and wireframes to launch and beyond expectations.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EXPERIENCE CARDS
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner exp-timeline">
+
+      <div class="exp-timeline-header">
+        <p class="resume-label"><span class="resume-dot"></span> EXPERIENCE</p>
+        <h2 class="skills-section-title">Work History</h2>
+      </div>
+
+      <div class="exp-cards-grid">
+
+        <!-- TheTechIO -->
+        <div class="exp-card">
+          <div class="exp-card-top">
+            <div class="exp-card-logo">T</div>
+            <span class="exp-card-badge">Full-time</span>
+          </div>
+          <div class="exp-card-meta">
+            <span class="exp-card-date"><i class="bi bi-calendar3"></i> 2023 — Present</span>
+            <span class="exp-card-location"><i class="bi bi-geo-alt"></i> Remote</span>
+          </div>
+          <h3 class="exp-card-company">TheTechIO</h3>
+          <p class="exp-card-role">WordPress Developer</p>
+          <p class="exp-card-desc">Building custom WordPress themes, WooCommerce stores, and plugin solutions. Leading end-to-end development for international clients.</p>
+          <div class="exp-card-tags">
+            <span>WordPress</span>
+            <span>WooCommerce</span>
+            <span>PHP</span>
+            <span>Divi</span>
+          </div>
+        </div>
+
+        <!-- FIP -->
+        <div class="exp-card">
+          <div class="exp-card-top">
+            <div class="exp-card-logo">F</div>
+            <span class="exp-card-badge">Full-time</span>
+          </div>
+          <div class="exp-card-meta">
+            <span class="exp-card-date"><i class="bi bi-calendar3"></i> 2023 — Present</span>
+            <span class="exp-card-location"><i class="bi bi-geo-alt"></i> Remote</span>
+          </div>
+          <h3 class="exp-card-company">FIP</h3>
+          <p class="exp-card-role">WordPress Developer</p>
+          <p class="exp-card-desc">Designing and developing responsive frontend layouts, WordPress theme customisation, and performance optimisation for client websites.</p>
+          <div class="exp-card-tags">
+            <span>WordPress</span>
+            <span>HTML/CSS</span>
+            <span>Beaver Builder</span>
+          </div>
+        </div>
+
+        <!-- Freelance -->
+        <div class="exp-card">
+          <div class="exp-card-top">
+            <div class="exp-card-logo light"><i class="bi bi-person-workspace"></i></div>
+            <span class="exp-card-badge">Freelance</span>
+          </div>
+          <div class="exp-card-meta">
+            <span class="exp-card-date"><i class="bi bi-calendar3"></i> 2021 — Present</span>
+            <span class="exp-card-location"><i class="bi bi-globe"></i> Worldwide</span>
+          </div>
+          <h3 class="exp-card-company">Freelance</h3>
+          <p class="exp-card-role">WordPress &amp; WooCommerce Developer</p>
+          <p class="exp-card-desc">Delivered 12+ projects for clients across Pakistan, UK, and Canada — including e-commerce stores, LMS platforms, and business websites.</p>
+          <div class="exp-card-tags">
+            <span>WordPress</span>
+            <span>WooCommerce</span>
+            <span>LMS</span>
+            <span>UK / Canada</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EDUCATION CARDS
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner exp-timeline">
+
+      <div class="exp-timeline-header">
+        <p class="resume-label"><span class="resume-dot"></span> EDUCATION</p>
+        <h2 class="skills-section-title">Academic Background</h2>
+      </div>
+
+      <div class="edu-cards-grid">
+
+        <!-- VU -->
+        <div class="edu-card">
+          <div class="edu-card-icon-wrap">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <div class="edu-card-body">
+            <span class="edu-card-badge">In Progress</span>
+            <h3 class="edu-card-school">Virtual University of Pakistan</h3>
+            <p class="edu-card-degree">Bachelor of Science in Computer Science (BSCS)</p>
+            <p class="edu-card-date"><i class="bi bi-calendar3"></i> 2025 — Present</p>
+            <p class="edu-card-desc">Pursuing BSCS with focus on software engineering, data structures, and web technologies.</p>
+          </div>
+        </div>
+
+        <!-- Aptech -->
+        <div class="edu-card">
+          <div class="edu-card-icon-wrap">
+            <i class="bi bi-pc-display"></i>
+          </div>
+          <div class="edu-card-body">
+            <span class="edu-card-badge edu-card-badge--done">Completed</span>
+            <h3 class="edu-card-school">Aptech Computer Education</h3>
+            <p class="edu-card-degree">Diploma in Computer Science</p>
+            <p class="edu-card-date"><i class="bi bi-calendar3"></i> 2022 — 2025</p>
+            <p class="edu-card-desc">Covered web development, programming fundamentals, database management, and professional IT skills.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FULL-WIDTH IMAGE 2
+  ══════════════════════════════════════ -->
+  <div class="fullwidth-img-wrap">
+    <img src="assets/images/services-img.png" alt="Safwan — Work" />
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner testi-grid">
+
+      <!-- Left -->
+      <div>
+        <p class="resume-label"><span class="resume-dot"></span> REVIEWS &amp; FEEDBACK</p>
+        <h2 class="testi-heading">Clients<br>testimonials</h2>
+        <div class="testi-stats">
+          <div>
+            <span class="testi-num">12+</span>
+            <span class="testi-stat-label">Projects Completed</span>
+          </div>
+          <div>
+            <span class="testi-num">100%</span>
+            <span class="testi-stat-label">Clients Satisfied</span>
+            <div class="testi-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: slider -->
+      <div>
+        <div class="testi-avatars">
+          <button class="testi-av active" data-index="0"><span>JW</span></button>
+          <button class="testi-av" data-index="1"><span>AR</span></button>
+          <button class="testi-av" data-index="2"><span>RC</span></button>
+          <button class="testi-av" data-index="3"><span>AH</span></button>
+        </div>
+
+        <hr class="testi-divider" />
+
+        <div class="testi-slides">
+
+          <div class="testi-slide active">
+            <p class="testi-tag">"Professional &amp; Reliable"</p>
+            <p class="testi-quote">"Safwan delivered our website exactly as we envisioned. Clean design, fast loading, and very professional communication throughout the project."</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">James Whitfield</span>
+                <span class="testi-role">/ Director, Exclusive Pro Cleaning (UK)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <p class="testi-tag">"Delivered Before Deadline"</p>
+            <p class="testi-quote">"Excellent WordPress developer. He understood our requirements quickly and delivered before the deadline. Highly recommended!"</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">Ahmed Al Rashid</span>
+                <span class="testi-role">/ Founder, VortexWise</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <p class="testi-tag">"Quality Results"</p>
+            <p class="testi-quote">"Great work on our WooCommerce store. Safwan is skilled, responsive, and delivers quality results. Will definitely work again."</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">Ryan Carter</span>
+                <span class="testi-role">/ Owner, VapeHP Canada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <p class="testi-tag">"Strong Attention to Detail"</p>
+            <p class="testi-quote">"Professional WordPress developer with strong attention to detail. Our website and academy portal both turned out great."</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">Ali Hassan</span>
+                <span class="testi-role">/ CEO, Sherdil Cloud</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testi-dots">
+          <button class="testi-dot active" data-index="0"></button>
+          <button class="testi-dot" data-index="1"></button>
+          <button class="testi-dot" data-index="2"></button>
+          <button class="testi-dot" data-index="3"></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner faq-section">
+
+      <div class="faq-header">
+        <p class="resume-label"><span class="resume-dot"></span> FAQ</p>
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <p class="faq-subtext">A well-structured FAQ section builds trust and transparency — here are the most common questions clients ask before working with me.</p>
+      </div>
+
+      <div class="faq-body">
+
+        <!-- Left: image -->
+        <div class="faq-img">
+          <img src="assets/images/about-img.png" alt="Syed Safwan Ali" />
+        </div>
+
+        <!-- Right: accordion -->
+        <div class="faq-list">
+
+          <div class="faq-item open">
+            <button class="faq-question">
+              1. What WordPress services do you offer?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              I offer end-to-end WordPress services including custom theme development, WooCommerce store setup, Divi &amp; Beaver Builder design, custom plugin development, speed optimisation, and ongoing maintenance &amp; support.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              2. Do you work with international clients?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes — I've successfully delivered projects for clients in the UK, Canada, and across Pakistan. I work fully remotely and communicate clearly through every stage of the project.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              3. What tools and page builders do you use?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              I specialise in Divi Builder and Beaver Builder for visual page construction, and I also build fully custom themes from scratch using PHP, HTML/CSS, and JavaScript when needed.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              4. Can you redesign my existing WordPress site?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely. I can audit your existing site, identify performance or design issues, and rebuild or redesign it while preserving your content and SEO structure.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              5. How do I get started working with you?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Simply send me an email at syedsafwanali8802@gmail.com or fill out the contact form below. I'll get back to you within 24 hours to discuss your project requirements and next steps.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner contact-grid">
+
+      <!-- Left: form -->
+      <div>
+        <p class="resume-label"><span class="resume-dot"></span> CONTACT ME</p>
+        <h2 class="contact-heading">Let's work together!</h2>
+
+        <form class="contact-form" action="#" method="POST">
+          <div class="contact-form-top">
+            <div class="contact-fields">
+              <div class="contact-field">
+                <i class="bi bi-person"></i>
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="contact-field">
+                <i class="bi bi-envelope"></i>
+                <input type="email" placeholder="Email Address" required />
+              </div>
+              <div class="contact-field">
+                <i class="bi bi-telephone"></i>
+                <input type="tel" placeholder="Phone Number" />
+              </div>
+              <div class="contact-field">
+                <i class="bi bi-code-slash"></i>
+                <select>
+                  <option value="" disabled selected>Service Required</option>
+                  <option>Custom WordPress Development</option>
+                  <option>WooCommerce Store Setup</option>
+                  <option>Theme Customization</option>
+                  <option>Speed Optimization</option>
+                  <option>Website Maintenance</option>
+                  <option>Other</option>
+                </select>
+                <i class="bi bi-chevron-down contact-select-arrow"></i>
+              </div>
+            </div>
+            <div class="contact-textarea-wrap">
+              <i class="bi bi-chat-left"></i>
+              <textarea placeholder="Write message" rows="7"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="contact-btn">Send Your Message</button>
+        </form>
+      </div>
+
+      <!-- Right: map -->
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462143.5893069343!2d66.68635990000001!3d24.9215702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Karachi Map">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <a href="index.html" class="footer-logo">
+        <i class="bi bi-circle-half"></i>
+        SAFWAN
+      </a>
+
+      <div class="footer-datetime">
+        <span class="footer-day"><i class="bi bi-calendar3"></i> <span id="footerDay"></span></span>
+        <span class="footer-sep">|</span>
+        <span class="footer-time"><i class="bi bi-clock"></i> <span id="footerTime"></span></span>
+      </div>
+
+      <p class="footer-copy">© 2025 <strong>Syed Safwan Ali</strong>. All Rights Reserved.</p>
+
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
