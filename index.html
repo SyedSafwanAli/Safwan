@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safwan</title>
+
+  <!-- Inter Tight Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="mailto:syedsafwanali8802@gmail.com" class="header-email">
+        <i class="bi bi-geo-alt"></i>
+        syedsafwanali8802@gmail.com
+      </a>
+
+      <a href="#" class="header-logo">
+        <i class="bi bi-circle-half"></i>
+        SAFWAN
+      </a>
+
+      <button class="hamburger-btn" id="menuBtn" aria-label="Open menu">
+        <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="2"  x2="28" y2="2"  stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       OVERLAY
+  ══════════════════════════════════════ -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ══════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-top">
+      <a href="#" class="sidebar-logo">
+        <i class="bi bi-circle-half"></i>
+        SAFWAN
+      </a>
+      <button class="close-btn" id="closeBtn" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-house"></i> Home</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-person"></i> About</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-briefcase"></i> Work</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-stars"></i> Services</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-grid"></i> Pages</span>
+        <span class="nav-plus">+</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-label"><i class="bi bi-envelope"></i> Contact</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-about">
+      <h3>About Us</h3>
+      <p>Passionate frontend developer crafting clean, modern, and responsive web experiences.</p>
+      <a href="#" class="btn-outline"><i class="bi bi-arrow-right"></i> Contact Us</a>
+    </div>
+
+    <div class="sidebar-contact">
+      <h3>Contact Us</h3>
+      <div class="contact-row">
+        <div class="contact-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+        <span>Karachi, Pakistan</span>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div>
+        <span>+92 317 0666406</span>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div>
+        <span>syedsafwanali8802@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="sidebar-social">
+      <a href="#" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════════
+       HERO SECTION
+       parent: sec-wrap (border-bottom only)
+       child:  sec-inner (max-width 1480px, width 80%)
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner hero">
+
+      <span class="hero-plain">SYED SAfWAN.</span>
+
+      <div class="hero-box-wrap">
+        <div class="hero-box">ALI</div>
+        <span class="hero-badge">WordPress Developer</span>
+      </div>
+
+      <div class="hero-desc">
+        <p>I've <strong>4+ Years</strong> of Experience<br>in <strong>WordPress Development</strong></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT SECTION
+       parent: sec-wrap (border-bottom only)
+       child:  sec-inner (max-width 1480px, width 80%)
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner about">
+
+      <!-- Left: Image -->
+      <div class="about-img">
+        <img src="assets/images/about-img.png" alt="Syed Safwan Ali" />
+      </div>
+
+      <!-- Right: Content -->
+      <div class="about-content">
+
+        <!-- Upper: label + headline + bio + actions -->
+        <div class="about-upper">
+          <p class="about-label"><span class="about-dot"></span> ABOUT ME</p>
+
+          <h2 class="about-headline">WordPress Expert &amp;<br>Frontend Developer</h2>
+
+          <p class="about-bio">
+            "I'm <strong>Syed Safwan Ali</strong>, a WordPress developer passionate about building
+            fast, modern, and functional websites. I help businesses turn their ideas into
+            seamless digital experiences. I have completed <strong>12+ projects.</strong>"
+          </p>
+
+          <div class="about-actions">
+            <a href="#" class="btn-cv"><i class="bi bi-download"></i> Download CV</a>
+            <div class="about-socials">
+              <a href="#" class="about-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="about-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="about-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="about-social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="#" class="about-social-link" aria-label="Behance"><i class="bi bi-behance"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lower: contact info rows (full-width borders) -->
+        <div class="about-info">
+          <div class="about-info-row">
+            <span class="about-info-label"><i class="bi bi-telephone"></i> Need Help?</span>
+            <a href="tel:+923170666406" class="about-info-value">+92 317 0666406</a>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-label"><i class="bi bi-envelope"></i> Email Address :</span>
+            <a href="mailto:syedsafwanali8802@gmail.com" class="about-info-value">syedsafwanali8802@gmail.com</a>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-label"><i class="bi bi-globe"></i> Website :</span>
+            <a href="#" class="about-info-value">syed-safwan.vercel.app</a>
+          </div>
+          <div class="about-info-row">
+            <span class="about-info-label"><i class="bi bi-geo-alt"></i> Address :</span>
+            <span class="about-info-value">Karachi, Pakistan</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       STATS SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner stats">
+
+      <div class="stat-item">
+        <span class="stat-number">12+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">4+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Countries Served</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       RESUME SECTION  (Experience / Skills / Education)
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner resume-grid">
+
+      <!-- ── COL 1: EXPERIENCE ── -->
+      <div class="resume-col">
+        <p class="resume-label"><span class="resume-dot"></span> EXPERIENCE</p>
+        <h2 class="resume-heading">My Job Experience</h2>
+
+        <div class="exp-list">
+
+          <div class="exp-item">
+            <div class="exp-left">
+              <div class="exp-logo" style="background:#1a1a2e; color:#fff;">T</div>
+              <div class="exp-info">
+                <span class="exp-company">TheTechIO</span>
+                <span class="exp-role">WordPress Developer</span>
+              </div>
+            </div>
+            <span class="exp-date">2023 - PRESENT</span>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-left">
+              <div class="exp-logo" style="background:#e8f4fd; color:#1a6fa8;">F</div>
+              <div class="exp-info">
+                <span class="exp-company">FIP</span>
+                <span class="exp-role">WordPress Developer</span>
+              </div>
+            </div>
+            <span class="exp-date">2023 - PRESENT</span>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-left">
+              <div class="exp-logo" style="background:#f0fdf4; color:#16a34a;">
+                <i class="bi bi-person-workspace"></i>
+              </div>
+              <div class="exp-info">
+                <span class="exp-company">Freelance</span>
+                <span class="exp-role">Freelance WP Developer</span>
+              </div>
+            </div>
+            <span class="exp-date">2021 - PRESENT</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── COL 2: SKILLS ── -->
+      <div class="resume-col resume-col--mid">
+        <p class="resume-label"><span class="resume-dot"></span> QUALITY SKILLS</p>
+        <h2 class="resume-heading">Best Quality Skills</h2>
+
+        <div class="skills-grid">
+
+          <!-- Row 1 -->
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#21759b;color:#fff;"><i class="bi bi-wordpress"></i></div>
+            <div class="skill-info"><span class="skill-name">WordPress</span><span class="skill-cat">Web Development</span></div>
+          </div>
+          <div class="skill-item skill-right">
+            <div class="skill-icon" style="background:#8224e3;color:#fff;">D</div>
+            <div class="skill-info"><span class="skill-name">Divi Builder</span><span class="skill-cat">Expert</span></div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#f05a28;color:#fff;">BB</div>
+            <div class="skill-info"><span class="skill-name">Beaver Builder</span><span class="skill-cat">Expert</span></div>
+          </div>
+          <div class="skill-item skill-right">
+            <div class="skill-icon" style="background:#96588a;color:#fff;">WC</div>
+            <div class="skill-info"><span class="skill-name">WooCommerce</span><span class="skill-cat">E-Commerce</span></div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#777bb4;color:#fff;"><i class="bi bi-code-slash"></i></div>
+            <div class="skill-info"><span class="skill-name">PHP</span><span class="skill-cat">Development</span></div>
+          </div>
+          <div class="skill-item skill-right">
+            <div class="skill-icon" style="background:#31a8ff;color:#fff;">Ps</div>
+            <div class="skill-info"><span class="skill-name">Photoshop</span><span class="skill-cat">Design</span></div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#f7df1e;color:#111;">JS</div>
+            <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-cat">Frontend</span></div>
+          </div>
+          <div class="skill-item skill-right">
+            <div class="skill-icon" style="background:#7d2ae8;color:#fff;"><i class="bi bi-brush"></i></div>
+            <div class="skill-info"><span class="skill-name">Canva</span><span class="skill-cat">Design</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── COL 3: EDUCATION ── -->
+      <div class="resume-col">
+        <p class="resume-label"><span class="resume-dot"></span> MY STUDY</p>
+        <h2 class="resume-heading">Educational</h2>
+
+        <div class="edu-list">
+
+          <div class="edu-item">
+            <span class="edu-degree">BSCS</span>
+            <span class="edu-uni">Virtual University of Pakistan <em>(2025 - Present)</em></span>
+          </div>
+
+          <div class="edu-item">
+            <span class="edu-degree">Diploma in CS</span>
+            <span class="edu-uni">Aptech Computer Education <em>(2022 - 2025)</em></span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SERVICES SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner srv-grid">
+
+      <!-- Left panel -->
+      <div class="srv-left">
+        <p class="resume-label"><span class="resume-dot"></span> SERVICES</p>
+        <h2 class="srv-heading">Popular WordPress<br>Services</h2>
+        <div class="srv-media">
+          <img src="assets/images/services-img.png" alt="Services" />
+          <button class="srv-play" aria-label="Play"><i class="bi bi-play-fill"></i></button>
+        </div>
+      </div>
+
+      <!-- Right: service list -->
+      <div class="srv-list">
+
+        <div class="srv-item">
+          <span class="srv-num">01</span>
+          <div class="srv-thumb"><img src="assets/images/services-img.png" alt="" /></div>
+          <div class="srv-body">
+            <div class="srv-title-row"><span class="srv-dot-sm"></span><h3 class="srv-title">Custom WordPress Development</h3></div>
+            <div class="srv-desc"><div><p>We build fully custom WordPress websites from scratch — tailored to your brand, goals, and audience. Clean code, fast performance, and pixel-perfect design.</p></div></div>
+          </div>
+        </div>
+
+        <div class="srv-item">
+          <span class="srv-num">02</span>
+          <div class="srv-thumb"><img src="assets/images/services-img.png" alt="" /></div>
+          <div class="srv-body">
+            <div class="srv-title-row"><span class="srv-dot-sm"></span><h3 class="srv-title">WooCommerce Store Setup</h3></div>
+            <div class="srv-desc"><div><p>Complete WooCommerce setup with product pages, payment gateways, shipping, and a smooth checkout experience built for conversions.</p></div></div>
+          </div>
+        </div>
+
+        <div class="srv-item">
+          <span class="srv-num">03</span>
+          <div class="srv-thumb"><img src="assets/images/services-img.png" alt="" /></div>
+          <div class="srv-body">
+            <div class="srv-title-row"><span class="srv-dot-sm"></span><h3 class="srv-title">Divi &amp; Beaver Builder Design</h3></div>
+            <div class="srv-desc"><div><p>Stunning, responsive layouts using Divi or Beaver Builder — drag-and-drop precision with professional visual results delivered fast.</p></div></div>
+          </div>
+        </div>
+
+        <div class="srv-item active">
+          <span class="srv-num">04</span>
+          <div class="srv-thumb"><img src="assets/images/services-img.png" alt="" /></div>
+          <div class="srv-body">
+            <div class="srv-title-row"><span class="srv-dot-sm"></span><h3 class="srv-title">Custom Plugin Development</h3></div>
+            <div class="srv-desc"><div><p>We build custom WordPress plugins tailored to your exact requirements — ReactBridge integrations, unique functionality, and clean scalable code.</p></div></div>
+          </div>
+        </div>
+
+        <div class="srv-item">
+          <span class="srv-num">05</span>
+          <div class="srv-thumb"><img src="assets/images/services-img.png" alt="" /></div>
+          <div class="srv-body">
+            <div class="srv-title-row"><span class="srv-dot-sm"></span><h3 class="srv-title">WordPress Speed Optimization</h3></div>
+            <div class="srv-desc"><div><p>Boost your site's Core Web Vitals, reduce load times, and improve SEO rankings with expert caching, image optimization, and code cleanup.</p></div></div>
+          </div>
+        </div>
+
+        <div class="srv-item">
+          <span class="srv-num">06</span>
+          <div class="srv-thumb"><img src="assets/images/services-img.png" alt="" /></div>
+          <div class="srv-body">
+            <div class="srv-title-row"><span class="srv-dot-sm"></span><h3 class="srv-title">Website Maintenance &amp; Support</h3></div>
+            <div class="srv-desc"><div><p>Regular updates, security monitoring, backups, and on-demand fixes — so your site stays secure, fast, and running smoothly 24/7.</p></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       BEST WORKS SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner">
+
+      <!-- Header row -->
+      <div class="works-header">
+        <p class="resume-label"><span class="resume-dot"></span> BEST WORKS</p>
+        <h2 class="works-heading">Explore my projects</h2>
+      </div>
+
+      <!-- Project list -->
+      <div class="works-list">
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WordPress</span>
+            <h3 class="work-title">exclusiveprocleaning.co.uk</h3>
+            <p class="work-sub">Cleaning Services (UK)</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="exclusiveprocleaning" /></div>
+          <span class="work-year">(2024)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WooCommerce</span>
+            <h3 class="work-title">vapehp.ca</h3>
+            <p class="work-sub">E-Commerce (Canada)</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="vapehp" /></div>
+          <span class="work-year">(2024)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WordPress</span>
+            <h3 class="work-title">vortexwise.com</h3>
+            <p class="work-sub">Amazon UGC / Marketing</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="vortexwise" /></div>
+          <span class="work-year">(2024)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WordPress</span>
+            <h3 class="work-title">sherdilcloud.com</h3>
+            <p class="work-sub">IT / Cloud Services</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="sherdilcloud" /></div>
+          <span class="work-year">(2023)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WordPress / LMS</span>
+            <h3 class="work-title">academy.sherdil.org</h3>
+            <p class="work-sub">Online Academy / LMS</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="academy.sherdil" /></div>
+          <span class="work-year">(2023)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WordPress</span>
+            <h3 class="work-title">diamond-dpc.com</h3>
+            <p class="work-sub">Events / Lead Gen</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="diamond-dpc" /></div>
+          <span class="work-year">(2023)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WooCommerce</span>
+            <h3 class="work-title">genzjewellery.com</h3>
+            <p class="work-sub">E-Commerce (Jewelry)</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="genzjewellery" /></div>
+          <span class="work-year">(2023)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WordPress</span>
+            <h3 class="work-title">pixowallpapers.com</h3>
+            <p class="work-sub">Wallpaper Gallery</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="pixowallpapers" /></div>
+          <span class="work-year">(2023)</span>
+        </div>
+
+        <div class="work-item">
+          <div class="work-left">
+            <span class="work-tag">WooCommerce</span>
+            <h3 class="work-title">importedvitamins.com</h3>
+            <p class="work-sub">E-Commerce (Health)</p>
+          </div>
+          <div class="work-img"><img src="assets/images/services-img.png" alt="importedvitamins" /></div>
+          <span class="work-year">(2023)</span>
+        </div>
+
+        <!-- More row -->
+        <div class="work-more">+ More available on request</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIALS SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner testi-grid">
+
+      <!-- Left panel -->
+      <div class="testi-left">
+        <p class="resume-label"><span class="resume-dot"></span> REVIEWS &amp; FEEDBACK</p>
+        <h2 class="testi-heading">Clients<br>testimonials</h2>
+        <div class="testi-stats">
+          <div class="testi-stat">
+            <span class="testi-num">12+</span>
+            <span class="testi-stat-label">Projects Completed</span>
+          </div>
+          <div class="testi-stat">
+            <span class="testi-num">100%</span>
+            <span class="testi-stat-label">Clients Satisfied</span>
+            <div class="testi-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right panel: slider -->
+      <div class="testi-right">
+
+        <!-- Avatar navigation -->
+        <div class="testi-avatars">
+          <button class="testi-av active" data-index="0"><span>JW</span></button>
+          <button class="testi-av" data-index="1"><span>AR</span></button>
+          <button class="testi-av" data-index="2"><span>RC</span></button>
+          <button class="testi-av" data-index="3"><span>AH</span></button>
+        </div>
+
+        <hr class="testi-divider" />
+
+        <!-- Slides -->
+        <div class="testi-slides">
+
+          <div class="testi-slide active">
+            <p class="testi-tag">"Professional &amp; Reliable"</p>
+            <p class="testi-quote">"Safwan delivered our website exactly as we envisioned. Clean design, fast loading, and very professional communication throughout the project."</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">James Whitfield</span>
+                <span class="testi-role">/ Director, Exclusive Pro Cleaning (UK)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <p class="testi-tag">"Delivered Before Deadline"</p>
+            <p class="testi-quote">"Excellent WordPress developer. He understood our requirements quickly and delivered before the deadline. Highly recommended!"</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">Ahmed Al Rashid</span>
+                <span class="testi-role">/ Founder, VortexWise</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <p class="testi-tag">"Quality Results"</p>
+            <p class="testi-quote">"Great work on our WooCommerce store. Safwan is skilled, responsive, and delivers quality results. Will definitely work again."</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">Ryan Carter</span>
+                <span class="testi-role">/ Owner, VapeHP Canada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <p class="testi-tag">"Strong Attention to Detail"</p>
+            <p class="testi-quote">"Professional WordPress developer with strong attention to detail. Our website and academy portal both turned out great."</p>
+            <div class="testi-author">
+              <span class="testi-qmark"><i class="bi bi-quote"></i></span>
+              <div>
+                <span class="testi-name">Ali Hassan</span>
+                <span class="testi-role">/ CEO, Sherdil Cloud</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dot navigation -->
+        <div class="testi-dots">
+          <button class="testi-dot active" data-index="0"></button>
+          <button class="testi-dot" data-index="1"></button>
+          <button class="testi-dot" data-index="2"></button>
+          <button class="testi-dot" data-index="3"></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       BLOG SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner">
+
+      <!-- Header -->
+      <div class="blog-header">
+        <div class="blog-header-left">
+          <p class="resume-label"><span class="resume-dot"></span> BLOG &amp; NEWS</p>
+          <h2 class="blog-heading">Latest blog and news</h2>
+        </div>
+        <a href="#" class="blog-more-btn">View More Posts</a>
+      </div>
+
+      <!-- 4-column grid -->
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/services-img.png" alt="WordPress Speed" />
+          </div>
+          <div class="blog-body">
+            <p class="blog-date"><span class="resume-dot"></span> <span class="blog-date-label">Date</span> 15 Jan 2025</p>
+            <h3 class="blog-title">How to Speed Up Your WordPress Website in 2025</h3>
+            <div class="blog-author">
+              <span class="blog-av">SA</span>
+              <span>Post by <strong>Safwan</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/services-img.png" alt="WooCommerce vs Shopify" />
+          </div>
+          <div class="blog-body">
+            <p class="blog-date"><span class="resume-dot"></span> <span class="blog-date-label">Date</span> 02 Feb 2025</p>
+            <h3 class="blog-title">WooCommerce vs Shopify: Which is Right for Your Business?</h3>
+            <div class="blog-author">
+              <span class="blog-av">SA</span>
+              <span>Post by <strong>Safwan</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/services-img.png" alt="Page Builders" />
+          </div>
+          <div class="blog-body">
+            <p class="blog-date"><span class="resume-dot"></span> <span class="blog-date-label">Date</span> 20 Feb 2025</p>
+            <h3 class="blog-title">Top 5 WordPress Page Builders Compared: Divi, Elementor &amp; More</h3>
+            <div class="blog-author">
+              <span class="blog-av">SA</span>
+              <span>Post by <strong>Safwan</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/images/services-img.png" alt="Professional Website" />
+          </div>
+          <div class="blog-body">
+            <p class="blog-date"><span class="resume-dot"></span> <span class="blog-date-label">Date</span> 10 Mar 2025</p>
+            <h3 class="blog-title">Why Every Business Needs a Professional Website in 2025</h3>
+            <div class="blog-author">
+              <span class="blog-av">SA</span>
+              <span>Post by <strong>Safwan</strong></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════ -->
+  <section class="sec-wrap">
+    <div class="sec-inner contact-grid">
+
+      <!-- Left: form -->
+      <div class="contact-left">
+        <p class="resume-label"><span class="resume-dot"></span> CONTACT ME</p>
+        <h2 class="contact-heading">Let's work together!</h2>
+
+        <form class="contact-form" action="#" method="POST">
+
+          <!-- Top: inputs | textarea -->
+          <div class="contact-form-top">
+
+            <!-- Input fields stack -->
+            <div class="contact-fields">
+              <div class="contact-field">
+                <i class="bi bi-person"></i>
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="contact-field">
+                <i class="bi bi-envelope"></i>
+                <input type="email" placeholder="Email Address" required />
+              </div>
+              <div class="contact-field">
+                <i class="bi bi-telephone"></i>
+                <input type="tel" placeholder="Phone Number" />
+              </div>
+              <div class="contact-field">
+                <i class="bi bi-code-slash"></i>
+                <select>
+                  <option value="" disabled selected>Service Required</option>
+                  <option>Custom WordPress Development</option>
+                  <option>WooCommerce Store Setup</option>
+                  <option>Theme Customization</option>
+                  <option>Speed Optimization</option>
+                  <option>Website Maintenance</option>
+                  <option>Other</option>
+                </select>
+                <i class="bi bi-chevron-down contact-select-arrow"></i>
+              </div>
+            </div>
+
+            <!-- Message textarea -->
+            <div class="contact-textarea-wrap">
+              <i class="bi bi-chat-left"></i>
+              <textarea placeholder="Write message" rows="7"></textarea>
+            </div>
+
+          </div>
+
+          <!-- Send button -->
+          <button type="submit" class="contact-btn">Send Your Message</button>
+
+        </form>
+      </div>
+
+      <!-- Right: Google Map -->
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462143.5893069343!2d66.68635990000001!3d24.9215702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Karachi Map">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- Left: logo -->
+      <a href="#" class="footer-logo">
+        <i class="bi bi-circle-half"></i>
+        SAFWAN
+      </a>
+
+      <!-- Center: day + time -->
+      <div class="footer-datetime">
+        <span class="footer-day"><i class="bi bi-calendar3"></i> <span id="footerDay"></span></span>
+        <span class="footer-sep">|</span>
+        <span class="footer-time"><i class="bi bi-clock"></i> <span id="footerTime"></span></span>
+      </div>
+
+      <!-- Right: copyright -->
+      <p class="footer-copy">© 2025 <strong>Syed Safwan Ali</strong>. All Rights Reserved.</p>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
