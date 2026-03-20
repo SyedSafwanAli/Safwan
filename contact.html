@@ -368,8 +368,9 @@
 
         window.location.href = 'mailto:syedsafwanali8802@gmail.com?subject=' + subject + '&body=' + body;
 
-        form.style.display = 'none';
-        success.style.display = 'flex';
+        setTimeout(function () {
+          window.location.href = 'thank-you.html';
+        }, 500);
       });
 
       reset.addEventListener('click', function () {
