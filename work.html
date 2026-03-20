@@ -308,9 +308,26 @@
     </div>
   </footer>
 
+  <!-- Custom cursor for work items -->
+  <div class="work-cursor" id="workCursor">View Now</div>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var cursor = document.getElementById('workCursor');
+      var items  = document.querySelectorAll('.work-item');
+      document.addEventListener('mousemove', function (e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top  = e.clientY + 'px';
+      });
+      items.forEach(function (item) {
+        item.addEventListener('mouseenter', function () { cursor.classList.add('visible'); });
+        item.addEventListener('mouseleave', function () { cursor.classList.remove('visible'); });
+      });
+    })();
+  </script>
 </body>
 </html>
