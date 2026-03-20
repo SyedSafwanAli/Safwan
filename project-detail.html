@@ -45,14 +45,14 @@
       <div class="nav-item"><a href="index.html" class="nav-label"><i class="bi bi-house"></i> Home</a><span class="nav-plus">+</span></div>
       <div class="nav-item"><a href="about.html" class="nav-label"><i class="bi bi-person"></i> About</a><span class="nav-plus">+</span></div>
       <div class="nav-item"><a href="work.html" class="nav-label"><i class="bi bi-briefcase"></i> Work</a><span class="nav-plus">+</span></div>
-      <div class="nav-item"><span class="nav-label"><i class="bi bi-stars"></i> Services</span><span class="nav-plus">+</span></div>
-      <div class="nav-item"><span class="nav-label"><i class="bi bi-grid"></i> Pages</span><span class="nav-plus">+</span></div>
-      <div class="nav-item"><span class="nav-label"><i class="bi bi-envelope"></i> Contact</span></div>
+      <div class="nav-item"><a href="services.html" class="nav-label"><i class="bi bi-stars"></i> Services</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="blogs.html" class="nav-label"><i class="bi bi-pencil-square"></i> Blogs</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="contact.html" class="nav-label"><i class="bi bi-envelope"></i> Contact</a></div>
     </nav>
     <div class="sidebar-about">
       <h3>About Us</h3>
       <p>Passionate frontend developer crafting clean, modern, and responsive web experiences.</p>
-      <a href="about.html" class="btn-outline"><i class="bi bi-arrow-right"></i> Contact Us</a>
+      <a href="contact.html" class="btn-outline"><i class="bi bi-arrow-right"></i> Contact Us</a>
     </div>
     <div class="sidebar-contact">
       <h3>Contact Us</h3>
@@ -135,7 +135,7 @@
 
       <div class="pd-overview-left">
         <p class="resume-label"><span class="resume-dot"></span> PROJECT OVERVIEW</p>
-        <h2 class="pd-overview-heading">What this<br>project is<br>about.</h2>
+        <h2 class="pd-overview-heading">What this project is<br>about.</h2>
       </div>
 
       <div class="pd-overview-right">
@@ -173,6 +173,26 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════ FAQ ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner faq-section">
+
+      <div class="faq-header">
+        <p class="resume-label"><span class="resume-dot"></span> FAQ</p>
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <p class="faq-subtext">Common questions clients ask about this specific project.</p>
+      </div>
+
+      <div class="faq-body">
+        <div class="faq-img">
+          <img src="assets/images/about-img.png" alt="Syed Safwan Ali" />
+        </div>
+        <div class="faq-list" id="pdFaqList"></div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ══════════════════════════════════════ NEXT PROJECT ══ -->
   <section class="sec-wrap">
     <div class="sec-inner pd-next" id="pdNextWrap">
@@ -196,6 +216,42 @@
       <p class="footer-copy">© 2025 <strong>Syed Safwan Ali</strong>. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- ══ Site Preview Canvas ══ -->
+  <div class="site-preview-overlay" id="sitePreviewOverlay">
+    <div class="site-preview-card">
+      <div class="site-preview-bar">
+        <div class="site-preview-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="site-preview-url" id="sitePreviewUrl"></span>
+        <div class="site-preview-actions">
+          <a class="site-preview-open" id="sitePreviewOpen" href="#" target="_blank" rel="noopener">
+            <i class="bi bi-box-arrow-up-right"></i> New tab
+          </a>
+          <button class="site-preview-close" id="sitePreviewClose">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="site-preview-frame-wrap">
+        <iframe class="site-preview-iframe" id="sitePreviewIframe" src="" title="Live Site Preview"></iframe>
+        <div class="site-preview-blocked" id="sitePreviewBlocked">
+          <i class="bi bi-shield-x"></i>
+          <p>This website blocks iframe previews for security reasons.</p>
+          <a id="sitePreviewBlockedLink" href="#" target="_blank" rel="noopener">
+            Open in new tab <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Floating Preview Button ══ -->
+  <button class="site-preview-fab" id="sitePreviewBtn">
+    <i class="bi bi-display"></i>
+    <span>Preview Site</span>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
@@ -255,11 +311,104 @@
           '</div>';
       }
 
+      /* ── faqs ── */
+      var faqList = document.getElementById('pdFaqList');
+      project.faqs.forEach(function (faq, i) {
+        var item = document.createElement('div');
+        item.className = 'faq-item' + (i === 0 ? ' open' : '');
+        item.innerHTML =
+          '<button class="faq-question">' +
+            (i + 1) + '. ' + faq.q +
+            '<span class="faq-icon">+</span>' +
+          '</button>' +
+          '<div class="faq-answer">' + faq.a + '</div>';
+        faqList.appendChild(item);
+      });
+
+      /* re-bind accordion for dynamically added items */
+      faqList.querySelectorAll('.faq-question').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item   = btn.closest('.faq-item');
+          var isOpen = item.classList.contains('open');
+          faqList.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+
       /* ── next project ── */
       var idx  = PROJECTS.findIndex(function (p) { return p.slug === slug; });
       var next = PROJECTS[(idx + 1) % PROJECTS.length];
       document.getElementById('pdNextTitle').textContent = next.title;
       document.getElementById('pdNextLink').href         = 'project-detail.html?p=' + next.slug;
+
+      /* ── site preview canvas ── */
+      var previewBtn     = document.getElementById('sitePreviewBtn');
+      var previewOverlay = document.getElementById('sitePreviewOverlay');
+      var previewIframe  = document.getElementById('sitePreviewIframe');
+      var previewClose   = document.getElementById('sitePreviewClose');
+      var previewUrlEl   = document.getElementById('sitePreviewUrl');
+      var previewOpen    = document.getElementById('sitePreviewOpen');
+      var iframeLoaded   = false;
+
+      function scaleIframe() {
+        var wrap  = previewIframe.parentElement;
+        var scale = wrap.offsetWidth / 1440;
+        previewIframe.style.transform  = 'scale(' + scale + ')';
+        previewIframe.style.height     = (wrap.offsetHeight / scale) + 'px';
+      }
+
+      previewBtn.addEventListener('click', function () {
+        if (window.innerWidth < 768) {
+          window.open(project.url, '_blank');
+          return;
+        }
+        if (!iframeLoaded) {
+          previewIframe.src = project.url;
+          previewUrlEl.textContent = project.url;
+          previewOpen.href = project.url;
+          iframeLoaded = true;
+        }
+        previewIframe.style.display = 'block';
+        document.getElementById('sitePreviewBlocked').style.display = 'none';
+        document.getElementById('sitePreviewBlockedLink').href = project.url;
+        previewOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(scaleIframe, 50);
+
+        /* detect blocked iframe after short delay */
+        setTimeout(function () {
+          try {
+            var doc = previewIframe.contentDocument || previewIframe.contentWindow.document;
+            if (!doc || doc.body === null || doc.body.innerHTML === '') {
+              previewIframe.style.display = 'none';
+              document.getElementById('sitePreviewBlocked').style.display = 'flex';
+            }
+          } catch (e) {
+            previewIframe.style.display = 'none';
+            document.getElementById('sitePreviewBlocked').style.display = 'flex';
+          }
+        }, 3000);
+      });
+
+      window.addEventListener('resize', function () {
+        if (previewOverlay.classList.contains('active')) scaleIframe();
+      });
+
+      function closePreview() {
+        previewOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      previewClose.addEventListener('click', closePreview);
+
+      /* click outside the card = close */
+      previewOverlay.addEventListener('click', function (e) {
+        if (e.target === previewOverlay) closePreview();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closePreview();
+      });
     })();
   </script>
 </body>
