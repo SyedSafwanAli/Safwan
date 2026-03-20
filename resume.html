@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Safwan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="mailto:syedsafwanali8802@gmail.com" class="header-email">
+        <i class="bi bi-geo-alt"></i> syedsafwanali8802@gmail.com
+      </a>
+      <a href="index.html" class="header-logo"><i class="bi bi-circle-half"></i> SAFWAN</a>
+      <button class="hamburger-btn" id="menuBtn" aria-label="Open menu">
+        <svg width="28" height="16" viewBox="0 0 28 16" fill="none">
+          <line x1="0" y1="2"  x2="28" y2="2"  stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a href="index.html" class="sidebar-logo"><i class="bi bi-circle-half"></i> SAFWAN</a>
+      <button class="close-btn" id="closeBtn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-item"><a href="index.html" class="nav-label"><i class="bi bi-house"></i> Home</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="about.html" class="nav-label"><i class="bi bi-person"></i> About</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="work.html" class="nav-label"><i class="bi bi-briefcase"></i> Work</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="services.html" class="nav-label"><i class="bi bi-stars"></i> Services</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="blogs.html" class="nav-label"><i class="bi bi-pencil-square"></i> Blogs</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="contact.html" class="nav-label"><i class="bi bi-envelope"></i> Contact</a></div>
+    </nav>
+    <div class="sidebar-about">
+      <h3>About Us</h3>
+      <p>Passionate frontend developer crafting clean, modern, and responsive web experiences.</p>
+      <a href="contact.html" class="btn-outline"><i class="bi bi-arrow-right"></i> Contact Us</a>
+    </div>
+    <div class="sidebar-contact">
+      <h3>Contact Us</h3>
+      <div class="contact-row"><div class="contact-icon-box"><i class="bi bi-geo-alt-fill"></i></div><span>Karachi, Pakistan</span></div>
+      <div class="contact-row"><div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div><span>+92 317 0666406</span></div>
+      <div class="contact-row"><div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div><span>syedsafwanali8802@gmail.com</span></div>
+    </div>
+    <div class="sidebar-social">
+      <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+      <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+    </div>
+  </aside>
+
+  <!-- ══ HERO ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner rv-hero">
+      <div class="rv-hero-left">
+        <span class="page-hero-badge">Online Resume</span>
+        <h1 class="rv-hero-name">Syed Safwan Ali</h1>
+        <p class="rv-hero-title">WordPress & Frontend Developer</p>
+        <p class="rv-hero-bio">4+ years building websites and web applications for clients across the UK, USA, Canada, Pakistan, and beyond. Specialised in WordPress, WooCommerce, and pixel-perfect frontend development.</p>
+        <div class="rv-hero-actions">
+          <a href="assets/Syed Safwan Ali CV.pdf" download class="rv-download-btn">
+            <i class="bi bi-download"></i> Download PDF
+          </a>
+          <a href="contact.html" class="nf-btn-outline">
+            Hire Me <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="rv-hero-right">
+        <div class="rv-contact-card">
+          <div class="rv-contact-row">
+            <i class="bi bi-envelope-fill rv-contact-icon"></i>
+            <div>
+              <span class="rv-contact-label">Email</span>
+              <a href="mailto:syedsafwanali8802@gmail.com" class="rv-contact-val">syedsafwanali8802@gmail.com</a>
+            </div>
+          </div>
+          <div class="rv-contact-row">
+            <i class="bi bi-telephone-fill rv-contact-icon"></i>
+            <div>
+              <span class="rv-contact-label">Phone</span>
+              <a href="tel:+923170666406" class="rv-contact-val">+92 317 0666406</a>
+            </div>
+          </div>
+          <div class="rv-contact-row">
+            <i class="bi bi-geo-alt-fill rv-contact-icon"></i>
+            <div>
+              <span class="rv-contact-label">Location</span>
+              <span class="rv-contact-val">Karachi, Pakistan</span>
+            </div>
+          </div>
+          <div class="rv-contact-row">
+            <i class="bi bi-globe rv-contact-icon"></i>
+            <div>
+              <span class="rv-contact-label">Availability</span>
+              <span class="rv-contact-val" style="color:#16a34a; font-weight:700;">Open to Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MAIN RESUME LAYOUT ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner rv-layout">
+
+      <!-- LEFT COLUMN -->
+      <aside class="rv-sidebar">
+
+        <!-- Skills -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> SKILLS</p>
+          <div class="rv-skill-list">
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>WordPress</span><span>95%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:95%"></div></div>
+            </div>
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>WooCommerce</span><span>90%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:90%"></div></div>
+            </div>
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>HTML / CSS</span><span>95%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:95%"></div></div>
+            </div>
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>JavaScript</span><span>75%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:75%"></div></div>
+            </div>
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>PHP</span><span>65%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:65%"></div></div>
+            </div>
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>SEO</span><span>80%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:80%"></div></div>
+            </div>
+            <div class="rv-skill">
+              <div class="rv-skill-top"><span>Figma / UI Design</span><span>70%</span></div>
+              <div class="rv-skill-bar"><div class="rv-skill-fill" style="width:70%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> TOOLS & TECH</p>
+          <div class="rv-tools-grid">
+            <span class="rv-tool"><i class="bi bi-wordpress"></i> WordPress</span>
+            <span class="rv-tool"><i class="bi bi-bag-check"></i> WooCommerce</span>
+            <span class="rv-tool"><i class="bi bi-code-slash"></i> Elementor</span>
+            <span class="rv-tool"><i class="bi bi-grid"></i> Divi</span>
+            <span class="rv-tool"><i class="bi bi-filetype-php"></i> PHP</span>
+            <span class="rv-tool"><i class="bi bi-filetype-css"></i> CSS3</span>
+            <span class="rv-tool"><i class="bi bi-filetype-js"></i> JavaScript</span>
+            <span class="rv-tool"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+            <span class="rv-tool"><i class="bi bi-git"></i> Git</span>
+            <span class="rv-tool"><i class="bi bi-figma"></i> Figma</span>
+            <span class="rv-tool"><i class="bi bi-graph-up"></i> SEO Tools</span>
+            <span class="rv-tool"><i class="bi bi-mortarboard"></i> LearnDash</span>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> EDUCATION</p>
+          <div class="rv-edu-list">
+            <div class="rv-edu-item">
+              <span class="rv-edu-year">2020 – 2024</span>
+              <h4 class="rv-edu-degree">Bachelor of Science — Computer Science</h4>
+              <p class="rv-edu-school">University of Karachi</p>
+            </div>
+            <div class="rv-edu-item">
+              <span class="rv-edu-year">2018 – 2020</span>
+              <h4 class="rv-edu-degree">Intermediate — Pre-Engineering</h4>
+              <p class="rv-edu-school">Board of Secondary Education Karachi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> LANGUAGES</p>
+          <div class="rv-lang-list">
+            <div class="rv-lang-item">
+              <span class="rv-lang-name">English</span>
+              <span class="rv-lang-level rv-lang-level--pro">Professional</span>
+            </div>
+            <div class="rv-lang-item">
+              <span class="rv-lang-name">Urdu</span>
+              <span class="rv-lang-level rv-lang-level--native">Native</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT COLUMN — Experience -->
+      <main class="rv-main">
+
+        <!-- Summary -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> PROFESSIONAL SUMMARY</p>
+          <p class="rv-summary">
+            Results-driven WordPress and frontend developer with 4+ years of experience delivering high-quality websites and e-commerce stores for clients across the UK, USA, Canada, and Pakistan. Proven track record of building pixel-perfect, mobile-first websites using WordPress, WooCommerce, Elementor, Divi, and modern HTML/CSS/JS. Strong focus on performance, SEO, and delivering business-driven solutions on time and within budget.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> WORK EXPERIENCE</p>
+          <div class="rv-exp-list">
+
+            <div class="rv-exp-item">
+              <div class="rv-exp-dot"></div>
+              <div class="rv-exp-body">
+                <div class="rv-exp-header">
+                  <div>
+                    <h3 class="rv-exp-role">Freelance WordPress & Frontend Developer</h3>
+                    <p class="rv-exp-company">Self-Employed · Remote</p>
+                  </div>
+                  <span class="rv-exp-date">2021 – Present</span>
+                </div>
+                <ul class="rv-exp-points">
+                  <li>Designed and developed 50+ WordPress websites for clients in the UK, USA, Canada, and Pakistan</li>
+                  <li>Built custom WooCommerce stores with payment gateway integrations (Stripe, PayPal, Razorpay)</li>
+                  <li>Implemented full LMS platforms using LearnDash and LifterLMS for online academies</li>
+                  <li>Delivered SEO audits and technical optimisations improving client rankings and Core Web Vitals</li>
+                  <li>Converted Figma and Adobe XD designs to pixel-perfect, fully responsive HTML/CSS/JS</li>
+                  <li>Maintained long-term client relationships with post-launch support and maintenance</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="rv-exp-item">
+              <div class="rv-exp-dot"></div>
+              <div class="rv-exp-body">
+                <div class="rv-exp-header">
+                  <div>
+                    <h3 class="rv-exp-role">Junior Web Developer</h3>
+                    <p class="rv-exp-company">Digital Agency · Karachi, Pakistan</p>
+                  </div>
+                  <span class="rv-exp-date">2020 – 2021</span>
+                </div>
+                <ul class="rv-exp-points">
+                  <li>Built and maintained WordPress websites for agency clients across various industries</li>
+                  <li>Collaborated with designers to implement responsive UI from Figma mockups</li>
+                  <li>Handled plugin configuration, theme customisation, and WordPress performance tuning</li>
+                  <li>Provided client training and technical documentation post-delivery</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="rv-block">
+          <p class="resume-label"><span class="resume-dot"></span> SELECTED PROJECTS</p>
+          <div class="rv-projects-grid">
+            <a href="project-detail.html?p=exclusiveprocleaning" class="rv-project-card">
+              <span class="rv-project-tag">WordPress</span>
+              <h4 class="rv-project-title">exclusiveprocleaning.co.uk</h4>
+              <p class="rv-project-sub">Cleaning Services · UK · 2024</p>
+              <i class="bi bi-arrow-up-right rv-project-arrow"></i>
+            </a>
+            <a href="project-detail.html?p=vapehp" class="rv-project-card">
+              <span class="rv-project-tag">WooCommerce</span>
+              <h4 class="rv-project-title">vapehp.ca</h4>
+              <p class="rv-project-sub">E-Commerce · Canada · 2024</p>
+              <i class="bi bi-arrow-up-right rv-project-arrow"></i>
+            </a>
+            <a href="project-detail.html?p=academy-sherdil" class="rv-project-card">
+              <span class="rv-project-tag">LMS</span>
+              <h4 class="rv-project-title">academy.sherdil.org</h4>
+              <p class="rv-project-sub">Online Academy · PK · 2023</p>
+              <i class="bi bi-arrow-up-right rv-project-arrow"></i>
+            </a>
+            <a href="project-detail.html?p=sherdilcloud" class="rv-project-card">
+              <span class="rv-project-tag">WordPress</span>
+              <h4 class="rv-project-title">sherdilcloud.com</h4>
+              <p class="rv-project-sub">IT Services · PK · 2023</p>
+              <i class="bi bi-arrow-up-right rv-project-arrow"></i>
+            </a>
+          </div>
+          <a href="work.html" class="rv-view-all">View all projects <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </main>
+
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner sd-cta">
+      <div class="sd-cta-left">
+        <h2>Interested in working<br><span style="color:var(--purple)">together?</span></h2>
+        <p>Download my CV or send me a message to discuss your project.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+        <a href="assets/Syed Safwan Ali CV.pdf" download class="sd-cta-btn">
+          <i class="bi bi-download"></i> Download CV
+        </a>
+        <a href="contact.html" class="nf-btn-outline" style="padding:18px 28px;">
+          Contact Me <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo"><i class="bi bi-circle-half"></i> SAFWAN</a>
+      <div class="footer-datetime">
+        <span class="footer-day"><i class="bi bi-calendar3"></i> <span id="footerDay"></span></span>
+        <span class="footer-sep">|</span>
+        <span class="footer-time"><i class="bi bi-clock"></i> <span id="footerTime"></span></span>
+      </div>
+      <p class="footer-copy">© 2025 <strong>Syed Safwan Ali</strong>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* Animate skill bars on scroll */
+    var fills = document.querySelectorAll('.rv-skill-fill');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.style.width;
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    fills.forEach(function (f) {
+      var w = f.style.width;
+      f.style.width = '0';
+      obs.observe(f);
+      setTimeout(function () { f.style.width = w; }, 100);
+    });
+  </script>
+</body>
+</html>

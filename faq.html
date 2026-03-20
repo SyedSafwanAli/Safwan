@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Safwan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="mailto:syedsafwanali8802@gmail.com" class="header-email">
+        <i class="bi bi-geo-alt"></i> syedsafwanali8802@gmail.com
+      </a>
+      <a href="index.html" class="header-logo"><i class="bi bi-circle-half"></i> SAFWAN</a>
+      <button class="hamburger-btn" id="menuBtn" aria-label="Open menu">
+        <svg width="28" height="16" viewBox="0 0 28 16" fill="none">
+          <line x1="0" y1="2"  x2="28" y2="2"  stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a href="index.html" class="sidebar-logo"><i class="bi bi-circle-half"></i> SAFWAN</a>
+      <button class="close-btn" id="closeBtn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-item"><a href="index.html" class="nav-label"><i class="bi bi-house"></i> Home</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="about.html" class="nav-label"><i class="bi bi-person"></i> About</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="work.html" class="nav-label"><i class="bi bi-briefcase"></i> Work</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="services.html" class="nav-label"><i class="bi bi-stars"></i> Services</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="blogs.html" class="nav-label"><i class="bi bi-pencil-square"></i> Blogs</a><span class="nav-plus">+</span></div>
+      <div class="nav-item"><a href="contact.html" class="nav-label"><i class="bi bi-envelope"></i> Contact</a></div>
+    </nav>
+    <div class="sidebar-about">
+      <h3>About Us</h3>
+      <p>Passionate frontend developer crafting clean, modern, and responsive web experiences.</p>
+      <a href="contact.html" class="btn-outline"><i class="bi bi-arrow-right"></i> Contact Us</a>
+    </div>
+    <div class="sidebar-contact">
+      <h3>Contact Us</h3>
+      <div class="contact-row"><div class="contact-icon-box"><i class="bi bi-geo-alt-fill"></i></div><span>Karachi, Pakistan</span></div>
+      <div class="contact-row"><div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div><span>+92 317 0666406</span></div>
+      <div class="contact-row"><div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div><span>syedsafwanali8802@gmail.com</span></div>
+    </div>
+    <div class="sidebar-social">
+      <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+      <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+    </div>
+  </aside>
+
+  <!-- ══ HERO ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner page-hero">
+      <span class="page-hero-badge">Got Questions?</span>
+      <h1 class="page-hero-title">
+        Frequently Asked <span class="page-hero-boxed">Questions</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- ══ FULL-WIDTH IMAGE ══ -->
+  <div class="fullwidth-img-wrap">
+    <img src="assets/images/services-img.png" alt="FAQ" />
+  </div>
+
+  <!-- ══ FAQ CATEGORIES ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner fq-layout">
+
+      <!-- Category tabs -->
+      <div class="fq-tabs" id="fqTabs">
+        <button class="fq-tab active" data-cat="general">General</button>
+        <button class="fq-tab" data-cat="wordpress">WordPress</button>
+        <button class="fq-tab" data-cat="ecommerce">E-Commerce</button>
+        <button class="fq-tab" data-cat="process">Process & Pricing</button>
+      </div>
+
+      <!-- General -->
+      <div class="fq-group active" data-cat="general">
+        <div class="fq-group-header">
+          <p class="resume-label"><span class="resume-dot"></span> GENERAL</p>
+          <h2 class="fq-group-heading">General Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question">1. Where are you based and do you work with international clients?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">I'm based in Karachi, Pakistan and work with clients globally — UK, USA, Canada, Australia, and the Middle East. All communication is done remotely via email, WhatsApp, or video call, and I'm comfortable working across different time zones.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">2. What kind of projects do you take on?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">I specialise in WordPress websites, WooCommerce stores, frontend HTML/CSS builds, website redesigns, LMS platforms, and SEO optimisation. If your project falls into one of these areas, I'd love to hear about it.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">3. How do I get started with a project?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Simply fill out the contact form on the Contact page or email me directly at syedsafwanali8802@gmail.com. Describe your project briefly and I'll get back to you within 24 hours to discuss scope, timeline, and budget.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">4. Do you offer ongoing support after the project is done?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. I offer post-launch support to fix bugs, make small updates, and answer questions. For larger ongoing maintenance, we can discuss a monthly retainer based on your needs.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">5. What languages do you speak?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">I'm fluent in English and Urdu. All project communication, documentation, and deliverables are provided in English.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WordPress -->
+      <div class="fq-group" data-cat="wordpress">
+        <div class="fq-group-header">
+          <p class="resume-label"><span class="resume-dot"></span> WORDPRESS</p>
+          <h2 class="fq-group-heading">WordPress Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question">1. Which page builders do you work with?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">I work with Elementor, Divi, Beaver Builder, and the native Gutenberg block editor. I recommend the right one based on your budget, technical comfort, and how much control you want after handoff.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">2. Will I be able to edit my site after you finish?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes — that's a priority. Every WordPress site I build is set up so you can update content, images, and pages without touching any code. I also provide a short training session after handoff.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">3. Do you build custom themes from scratch?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. For projects that need full design control or don't fit into a pre-built template, I build bespoke themes from the ground up using PHP, HTML, CSS, and JavaScript.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">4. Is hosting included in your service?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Hosting is not included, but I can help you choose a provider and set everything up. I recommend Kinsta, SiteGround, or Hostinger depending on your budget and traffic expectations.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">5. How long does a WordPress project take?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">A standard WordPress website takes 2–4 weeks from kickoff to launch. Complex sites with custom functionality, large content libraries, or integrations may take 4–8 weeks. I'll give you a realistic timeline during our discovery call.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="fq-group" data-cat="ecommerce">
+        <div class="fq-group-header">
+          <p class="resume-label"><span class="resume-dot"></span> E-COMMERCE</p>
+          <h2 class="fq-group-heading">E-Commerce Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question">1. Which payment gateways can you integrate?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">I integrate Stripe, PayPal, Razorpay, and most regional payment gateways. If you have a specific gateway in mind, let me know — I can almost certainly accommodate it.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">2. Can you migrate my existing store to WooCommerce?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. I handle migrations from Shopify, Wix, Squarespace, and other platforms to WooCommerce — including product data, images, customer records, and URL structure to protect your SEO.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">3. WooCommerce or Shopify — which do you recommend?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">It depends on your needs. Shopify is simpler to manage and great for straightforward product stores. WooCommerce is more flexible and cost-effective long-term, especially if you need custom functionality or already use WordPress. I can advise based on your specific situation.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">4. Do you set up shipping and tax rules?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes — tax rules, shipping zones, weight-based rates, free shipping thresholds, and courier API integrations (like DHL or FedEx) are all part of a full WooCommerce build.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">5. Can you add subscription or membership features to a store?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. Using WooCommerce Subscriptions or MemberPress, I can set up recurring billing, membership tiers, gated content, and subscription-based product access.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process & Pricing -->
+      <div class="fq-group" data-cat="process">
+        <div class="fq-group-header">
+          <p class="resume-label"><span class="resume-dot"></span> PROCESS & PRICING</p>
+          <h2 class="fq-group-heading">Process & Pricing</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question">1. How much does a website cost?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Pricing depends on the scope, complexity, and timeline of the project. A basic WordPress site starts from $300. A full WooCommerce store typically ranges from $500–$1,500+. I provide a fixed quote after our discovery call so there are no surprises.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">2. Do you require a deposit upfront?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. I typically require a 50% deposit before starting work, with the remaining 50% due upon project completion before the final handoff. For larger projects, we can discuss milestone-based payments.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">3. What payment methods do you accept?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">I accept bank transfer, PayPal, Wise, and USDT (crypto). For Pakistani clients, I also accept Easypaisa and JazzCash.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">4. What if I'm not happy with the design?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Every project includes revision rounds built into the scope. If you're not happy with the initial direction, I'll revise until it's right. I don't consider a project done until you're satisfied with the result.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">5. Do you sign an NDA or contract?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">Yes. I'm happy to sign an NDA if required. For all projects, I send a simple project agreement that outlines scope, timeline, payment terms, and ownership of deliverables — protecting both parties.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ STILL HAVE QUESTIONS ══ -->
+  <section class="sec-wrap">
+    <div class="sec-inner fq-cta">
+      <div class="fq-cta-icon"><i class="bi bi-chat-dots"></i></div>
+      <div class="fq-cta-body">
+        <h2>Still have a question?</h2>
+        <p>Send me a message and I'll get back to you within 24 hours.</p>
+      </div>
+      <a href="contact.html" class="sd-cta-btn">Ask Me Directly <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo"><i class="bi bi-circle-half"></i> SAFWAN</a>
+      <div class="footer-datetime">
+        <span class="footer-day"><i class="bi bi-calendar3"></i> <span id="footerDay"></span></span>
+        <span class="footer-sep">|</span>
+        <span class="footer-time"><i class="bi bi-clock"></i> <span id="footerTime"></span></span>
+      </div>
+      <p class="footer-copy">© 2025 <strong>Syed Safwan Ali</strong>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* Category tabs */
+    var tabs   = document.querySelectorAll('.fq-tab');
+    var groups = document.querySelectorAll('.fq-group');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var cat = tab.dataset.cat;
+        tabs.forEach(function (t)   { t.classList.remove('active'); });
+        groups.forEach(function (g) { g.classList.remove('active'); });
+        tab.classList.add('active');
+        document.querySelector('.fq-group[data-cat="' + cat + '"]').classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
